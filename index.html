@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mayura Jayasinghe — ML & AI Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+</head>
+<body>
+
+<!-- ─── NAV ──────────────────────────────────────────────────── -->
+<nav>
+  <a class="nav-logo" href="#hero">MJ.dev</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Get in Touch</a>
+  <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about"    onclick="closeMobile()">About</a>
+  <a href="#skills"   onclick="closeMobile()">Skills</a>
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#contact"  onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ─── HERO ─────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <p class="hero-label">// CS Student · Sri Lanka</p>
+    <h1 class="hero-name">Mayura<br><span class="accent">Jayasinghe</span></h1>
+    <p class="hero-tagline">Second-year CS student building ML models, AI tools, and data-driven apps that actually work.</p>
+    <p class="typewriter" id="typewriter"></p>
+    <div class="hero-buttons">
+      <a class="btn-primary" href="#projects">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+        View Projects
+      </a>
+      <a class="btn-ghost" href="https://github.com/mayura0001" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p class="section-label">// About Me</p>
+      <h2 class="section-title">ML on Steroids 🦾</h2>
+      <p>I'm a <strong>second-year Computer Science student</strong> from Sri Lanka, obsessed with machine learning, Python, and anything that sits at the edge of what AI can do today.</p>
+      <p>When I'm not training models or scraping datasets, I'm exploring <strong>Google Cloud ML Engineer</strong> topics, building web tools through FreeCodeCamp, and experimenting with generative AI workflows — like running Fooocus on Apple Silicon.</p>
+      <p>I also run <strong>Next Draft Show</strong> and keep a creative outlet through photography and video production using the Adobe suite.</p>
+      <p>I'm <strong>open to collaboration</strong> — reach out if you're building something interesting in the ML or AI space.</p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat-card">
+        <div class="stat-number">11</div>
+        <div class="stat-label">Public Repositories</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">2nd</div>
+        <div class="stat-label">Year CS Student</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">GCP</div>
+        <div class="stat-label">ML Engineer Track</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">🌐</div>
+        <div class="stat-label">Open to Collaborate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── SKILLS ────────────────────────────────────────────────── -->
+<section id="skills">
+  <p class="section-label reveal">// Tech Stack</p>
+  <h2 class="section-title reveal">What I Work With</h2>
+  <p class="section-sub reveal">A broad toolkit spanning ML research, full-stack development, and creative production.</p>
+
+  <div class="skills-grid">
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🤖</div>
+      <div class="skill-group-title">Machine Learning</div>
+      <div class="skill-tags">
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">Keras</span>
+        <span class="skill-tag">scikit-learn</span>
+        <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">Matplotlib</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🐍</div>
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">Shell / Bash</span>
+        <span class="skill-tag">SQL</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">⚙️</div>
+      <div class="skill-group-title">Tools & Platforms</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Google Cloud</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">GitHub</span>
+        <span class="skill-tag">Anaconda</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Netlify</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🌐</div>
+      <div class="skill-group-title">Web Development</div>
+      <div class="skill-tags">
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Next.js</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">TailwindCSS</span>
+        <span class="skill-tag">WordPress</span>
+        <span class="skill-tag">Arduino</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🎨</div>
+      <div class="skill-group-title">Creative Suite</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Photoshop</span>
+        <span class="skill-tag">Illustrator</span>
+        <span class="skill-tag">Lightroom</span>
+        <span class="skill-tag">Premiere Pro</span>
+        <span class="skill-tag">Canva</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">☁️</div>
+      <div class="skill-group-title">Currently Learning</div>
+      <div class="skill-tags">
+        <span class="skill-tag">GCP ML Engineer</span>
+        <span class="skill-tag">Generative AI</span>
+        <span class="skill-tag">LLM Fine-tuning</span>
+        <span class="skill-tag">MLOps</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── PROJECTS ──────────────────────────────────────────────── -->
+<section id="projects">
+  <p class="section-label reveal">// Projects</p>
+  <h2 class="section-title reveal">Things I've Built</h2>
+  <p class="section-sub reveal">Real-world ML experiments, automation tools, and AI-powered apps.</p>
+
+  <div class="projects-grid">
+
+    <div class="project-card reveal">
+      <div class="project-top">
+        <div class="project-icon">🎮</div>
+        <div class="project-links">
+          <a href="https://github.com/mayura0001/rps-predictor" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </div>
+      <h3 class="project-title">RPS Predictor</h3>
+      <p class="project-desc">A machine learning model that predicts Rock-Paper-Scissors outcomes by learning opponent patterns using real-time decision trees and probabilistic modeling.</p>
+      <div class="project-tags">
+        <span class="project-tag tag-py">Python</span>
+        <span class="project-tag tag-ml">ML</span>
+        <span class="project-tag tag-ml">scikit-learn</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top">
+        <div class="project-icon">🎨</div>
+        <div class="project-links">
+          <a href="https://github.com/mayura0001/Fooocus-on-Metal---M3-air-16GB-RAM" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </div>
+      <h3 class="project-title">Fooocus on Apple Metal</h3>
+      <p class="project-desc">Shell configuration and guide to run the Fooocus generative image AI on Apple M3 with Metal GPU acceleration — making SDXL viable on consumer Macs.</p>
+      <div class="project-tags">
+        <span class="project-tag tag-sh">Shell</span>
+        <span class="project-tag tag-ml">Generative AI</span>
+        <span class="project-tag tag-ml">SDXL</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top">
+        <div class="project-icon">📧</div>
+        <div class="project-links">
+          <a href="https://github.com/mayura0001/Email-Automation" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </div>
+      <h3 class="project-title">Email Automation</h3>
+      <p class="project-desc">A Python automation tool that handles bulk, scheduled, and conditional email sending — useful for outreach workflows, notifications, and data-driven campaigns.</p>
+      <div class="project-tags">
+        <span class="project-tag tag-py">Python</span>
+        <span class="project-tag tag-py">SMTP</span>
+        <span class="project-tag tag-py">Automation</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top">
+        <div class="project-icon">#️⃣</div>
+        <div class="project-links">
+          <a href="https://github.com/mayura0001/Hash_Grid" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </div>
+      <h3 class="project-title">Hash Grid</h3>
+      <p class="project-desc">A Python project exploring spatial hashing and grid-based data structures for fast collision detection and nearest-neighbor lookup — foundational for game and sim engines.</p>
+      <div class="project-tags">
+        <span class="project-tag tag-py">Python</span>
+        <span class="project-tag tag-ml">Algorithms</span>
+        <span class="project-tag tag-ml">Data Structures</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top">
+        <div class="project-icon">🤖</div>
+        <div class="project-links">
+          <a href="https://github.com/mayura0001/Jason" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </div>
+      <h3 class="project-title">Jason</h3>
+      <p class="project-desc">An HTML-based project named Jason — likely a conversational AI interface or assistant front-end, bridging natural language interaction with browser-based tooling.</p>
+      <div class="project-tags">
+        <span class="project-tag tag-html">HTML</span>
+        <span class="project-tag tag-js">JavaScript</span>
+        <span class="project-tag tag-ml">AI Interface</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="border-style: dashed; display: flex; align-items: center; justify-content: center; min-height: 200px;">
+      <div style="text-align: center; color: var(--muted);">
+        <div style="font-size: 2rem; margin-bottom: .5rem;">+</div>
+        <div style="font-family: var(--font-display); font-size: .8rem; letter-spacing:.05em;">More coming soon</div>
+        <a href="https://github.com/mayura0001" target="_blank" rel="noopener" style="font-family:var(--font-display);font-size:.75rem;color:var(--accent);text-decoration:none;margin-top:.5rem;display:block;">View all on GitHub ↗</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── CONTACT ───────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="contact-wrapper">
+    <div>
+      <p class="section-label reveal">// Contact</p>
+      <h2 class="section-title reveal">Let's Build Something</h2>
+      <p class="section-sub reveal">Open to collaboration on ML projects, AI tools, research, or just a good conversation about tech. Reach out through any channel.</p>
+
+      <div class="contact-links reveal">
+        <a class="contact-link" href="https://github.com/mayura0001" target="_blank" rel="noopener">
+          <div class="contact-link-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-value">github.com/mayura0001</span>
+          </div>
+          <span style="color:var(--muted);">↗</span>
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/mayura-jayasinghe" target="_blank" rel="noopener">
+          <div class="contact-link-icon" style="color:#0a66c2;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">in/mayura-jayasinghe</span>
+          </div>
+          <span style="color:var(--muted);">↗</span>
+        </a>
+        <a class="contact-link" href="https://x.com/mayura_jayasing" target="_blank" rel="noopener">
+          <div class="contact-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.261 5.635 5.903-5.635zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <span class="contact-link-label">X / Twitter</span>
+            <span class="contact-link-value">@mayura_jayasing</span>
+          </div>
+          <span style="color:var(--muted);">↗</span>
+        </a>
+        <a class="contact-link" href="https://mayura.netlify.app/" target="_blank" rel="noopener">
+          <div class="contact-link-icon">🌐</div>
+          <div class="contact-link-info">
+            <span class="contact-link-label">Website</span>
+            <span class="contact-link-value">mayura.netlify.app</span>
+          </div>
+          <span style="color:var(--muted);">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="section-label" style="margin-bottom:1.5rem;">// Send a Message</p>
+      <div class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell me what you're building..."></textarea>
+        </div>
+        <button class="btn-send" onclick="handleSend()">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/></svg>
+          Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+  <p class="footer-copy">© 2026 Mayura Jayasinghe — Built with ☕ &amp; curiosity</p>
+  <div class="footer-socials">
+    <a href="https://github.com/mayura0001" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/mayura-jayasinghe" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://x.com/mayura_jayasing" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://www.instagram.com/mayura__jayasinghe/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<!-- ─── TOAST ──────────────────────────────────────────────────── -->
+<div class="toast" id="toast">✅ Message noted — talk soon!</div>
+</body>
+</html>
