@@ -68,15 +68,15 @@ function handleSend() {
   sendBtn.textContent = 'Sending...';
 
   emailjs.send(
-    "service_pix81jn",    // ← replace with your real service ID
-    "template_829c24p",   // ← replace with your real template ID
+    "service_pix81jn",    // ← service ID
+    "template_829c24p",   // ← template ID
     { name, email, message },
-    "f-iqwOzwt4S8lp33E"     // ← replace with your EmailJS public key
+    "f-iqwOzwt4S8lp33E"     // ← EmailJS public key
   )
   .then(() => {
     // Send the auto-reply confirmation to the sender
     return emailjs.send(
-      "service_pix81jn",   // ← the same service ID
+      "service_pix81jn",   // ← same service ID
       "template_nhof6uy",  // ← the second template's ID
       { name, email, message },
       "f-iqwOzwt4S8lp33E" // ← the same EmailJS public key
