@@ -42,21 +42,51 @@ hamburger.classList.remove('open');
 mobileMenu.classList.remove('open');
 }
 
+
 /* ── CONTACT FORM ────────────────────────────────────────── */
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 function handleSend() {
-const name    = document.getElementById('name').value.trim();
-const email   = document.getElementById('email').value.trim();
-const message = document.getElementById('message').value.trim();
-if (!name || !email || !message) {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const sendBtn = document.getElementById('btn-send'); 
+
+  if (!name || !email || !message) {
     alert('Please fill in all fields.');
     return;
-}
-const toast = document.getElementById('toast');
-toast.classList.add('show');
-document.getElementById('name').value = '';
-document.getElementById('email').value = '';
-document.getElementById('message').value = '';
-setTimeout(() => toast.classList.remove('show'), 3500);
+  }
+
+  if (!isValidEmail(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  sendBtn.disabled = true;
+  sendBtn.textContent = 'Sending...';
+
+  emailjs.send(
+    "service_pix81jn",    // ← replace with your real service ID
+    "template_829c24p",   // ← replace with your real template ID
+    { name, email, message },
+    "f-iqwOzwt4S8lp33E"     // ← replace with your EmailJS public key
+  )
+  .then(() => {
+    alert("Email sent!");
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+  })
+  .catch(err => {
+    console.error(err);
+    alert("Failed to send email");
+  })
+  .finally(() => {
+    sendBtn.disabled = false;
+    sendBtn.textContent = 'Send';
+  });
 }
 
 /* ── ACTIVE NAV HIGHLIGHT ────────────────────────────────── */
