@@ -28,6 +28,66 @@ body {
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
+    cursor: none;
+}
+
+/* Hide default cursor on all interactive elements */
+a, button, input, textarea, select, [role="button"] {
+    cursor: none !important;
+}
+
+/* ── CUSTOM CURSOR ──────────────────────────────────────── */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: opacity .3s ease;
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-glow {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(126, 231, 135, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    filter: blur(8px);
+}
+
+/* ── CURSOR VIBRATION ───────────────────────────────────── */
+@keyframes vibrate {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    10% { transform: translate(-50%, -50%) scale(1.2); }
+    20% { transform: translate(-50%, -50%) scale(0.95); }
+    30% { transform: translate(-50%, -50%) scale(1.15); }
+    40% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    60% { transform: translate(-50%, -50%) scale(0.98); }
+    70% { transform: translate(-50%, -50%) scale(1.12); }
+    80% { transform: translate(-50%, -50%) scale(1.02); }
+    90% { transform: translate(-50%, -50%) scale(1.08); }
+}
+
+.cursor.vibrate {
+    animation: vibrate 0.4s ease-in-out;
 }
 
 /* ── SCROLLBAR ──────────────────────────────────────────── */

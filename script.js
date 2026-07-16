@@ -1,3 +1,82 @@
+/* ── ANIMATED CURSOR ─────────────────────────────────────── */
+const cursor = document.createElement('div');
+const cursorDot = document.createElement('div');
+const cursorGlow = document.createElement('div');
+
+cursor.className = 'cursor';
+cursorDot.className = 'cursor-dot';
+cursorGlow.className = 'cursor-glow';
+
+document.body.appendChild(cursor);
+document.body.appendChild(cursorDot);
+document.body.appendChild(cursorGlow);
+
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+let glowX = 0, glowY = 0;
+
+const speed = 0.15;
+const glowSpeed = 0.14;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animate() {
+    cursorX += (mouseX - cursorX) * speed;
+    cursorY += (mouseY - cursorY) * speed;
+    
+    glowX += (mouseX - glowX) * glowSpeed;
+    glowY += (mouseY - glowY) * glowSpeed;
+    
+    cursor.style.left = cursorX + 'px';
+    cursor.style.top = cursorY + 'px';
+    
+    cursorDot.style.left = mouseX + 'px';
+    cursorDot.style.top = mouseY + 'px';
+    
+    cursorGlow.style.left = glowX + 'px';
+    cursorGlow.style.top = glowY + 'px';
+    
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = '1';
+    cursorDot.style.opacity = '1';
+    cursorGlow.style.opacity = '1';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+    cursorDot.style.opacity = '0';
+    cursorGlow.style.opacity = '0';
+});
+
+/* ── BUTTON HOVER CURSOR EFFECT ─────────────────────────── */
+const clickables = document.querySelectorAll('a, button, input[type="submit"], input[type="button"], [role="button"]');
+
+clickables.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        cursor.classList.add('vibrate');
+        setTimeout(() => cursor.classList.remove('vibrate'), 400);
+    });
+});
+
+// Also handle dynamically added elements
+document.addEventListener('mouseover', (e) => {
+    const target = e.target;
+    if (target.tagName === 'A' || target.tagName === 'BUTTON' || 
+        (target.tagName === 'INPUT' && (target.type === 'submit' || target.type === 'button')) ||
+        target.hasAttribute('role') && target.getAttribute('role') === 'button') {
+        cursor.classList.add('vibrate');
+        setTimeout(() => cursor.classList.remove('vibrate'), 400);
+    }
+});
+
 /* ── TYPEWRITER ──────────────────────────────────────────── */
 const phrases = [
 'ML & Python Enthusiast',
